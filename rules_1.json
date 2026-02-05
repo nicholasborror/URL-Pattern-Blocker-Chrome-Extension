@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "regexFilter": "^https?:\\/\\/([^\\/]+\\.)?google\\.com\\/search\\?.*([?&]udm=50)(&|$)",
+      "resourceTypes": ["main_frame"]
+    },
+    "comment": "Blocks Google Search AI Mode. Pattern: regex match on google.com/search with query parameter udm=50"
+  },
+
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||example.com^",
+      "resourceTypes": ["main_frame"]
+    },
+    "comment": "Example: Block an entire domain and all subdomains. Pattern: urlFilter '||domain.com^'"
+  },
+
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||example.com^",
+      "resourceTypes": ["main_frame"]
+    },
+    "comment": "Block a full site including all subdomains (facebook.com, www.facebook.com, m.facebook.com, etc.)"
+  },
+
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||example.com/shorts",
+      "resourceTypes": ["main_frame"]
+    },
+    "comment": "Block a specific path on a site. Pattern: urlFilter '||domain.com/path'"
+  },
+
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "example.com/search?*udm=50",
+      "resourceTypes": ["main_frame"]
+    },
+    "comment": "Simpler query-string block using urlFilter wildcard. Less strict than regex, but easier to read"
+  },
+
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "regexFilter": "^https?:\\/\\/([^\\/]+\\.)?example\\.com\\/search\\?.*([?&]udm=50)(&|$)",
+      "resourceTypes": ["main_frame"]
+    },
+    "comment": "Strict query-string block using regex. Ensures udm=50 is a full parameter, not a substring"
+  }
+]

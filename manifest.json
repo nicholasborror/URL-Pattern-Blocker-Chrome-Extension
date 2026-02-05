@@ -1,0 +1,24 @@
+{
+  "name": "URL Pattern Blocker",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Blocks specific URLs using declarativeNetRequest rules like Google AI udm=50.",
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+    
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["*://*/*"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules_1.json"
+      }
+    ]
+  }
+}
