@@ -3,7 +3,14 @@
 A lightweight Chrome extension that blocks matching URLs using Chrome’s `declarativeNetRequest` rules. Handy for filtering out specific pages or query variants, like Google Search URLs containing `udm=50` which allows you to block Google's AI tab without blocking Google.com.
 
 ## Install
-- **Chrome Web Store:** [URL Pattern Blocker](https://chromewebstore.google.com/detail/url-pattern-blocker/mfihmecpcneikcfmekdgcjcahmgdfhcg)
+**Option 1: Chrome Web Store:** [URL Pattern Blocker](https://chromewebstore.google.com/detail/url-pattern-blocker/mfihmecpcneikcfmekdgcjcahmgdfhcg)
+
+**Option 2: Load unpacked (developer mode)**
+> 1. Download or clone this repository  
+> 2. Open `chrome://extensions`  
+> 3. Enable **Developer mode**  
+> 4. Click **Load unpacked**  
+> 5. Select the project folder
 
 ## What it does
 - Block URLs by pattern (rules based)
